@@ -1,104 +1,198 @@
-/* 4K Cinematic Website Styles for Dwight M Rose */
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-  color: #f8f8f8;
-  background: #000;
-  overflow: hidden;
-}
-
-/* 4K Responsive Scaling */
 body {
-  min-height: 100vh;
-  min-width: 100vw;
-  position: relative;
-  z-index: 1;
-}
-
-/* Cinematic Video Background */
-#bg-video {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 0;
-  filter: brightness(0.35) blur(2px) saturate(1.3) contrast(1.2);
-  /* Optional: add a slight vignette using pseudo-element */
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  z-index: 1;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  /* Vignette effect */
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.6) 100%);
-}
-
-/* Cinematic Content Overlay */
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100vw;
-  max-width: 100vw;
-  padding: 0 4vw;
-  /* Glassmorphic effect */
-  background: rgba(24, 24, 28, 0.45);
-  border-radius: 2vw;
-  box-shadow: 0 8px 64px 0 rgba(0,0,0,0.35);
-  backdrop-filter: blur(6px) saturate(1.3);
-}
-
-/* Cinematic Typography */
-.content h1 {
-  font-size: 6vw;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin: 0 0 1vw 0;
-  text-shadow:
-    0 2px 12px rgba(0,0,0,0.65),
-    0 0px 0px #fff;
-  color: #e5e5e5;
-}
-
-.content p {
-  font-size: 2.2vw;
-  font-weight: 400;
-  letter-spacing: 0.25em;
   margin: 0;
-  color: #fafafa;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  font-family: 'Montserrat', sans-serif;
+  background: #f7f3ef;
+  color: #3e2723;
 }
 
-/* Enhance for 4K displays */
-@media (min-width: 2560px) {
-  .content h1 { font-size: 3.5vw; }
-  .content p { font-size: 1.3vw; }
-  .content { padding: 0 18vw; }
+.section {
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  padding: 1.5rem;
+  background: #fff8f0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(78, 52, 46, 0.04);
 }
 
-/* Subtle fade-in animation */
-body, .content {
-  animation: fadeInCinematic 1.5s cubic-bezier(.55,0,.1,1) both;
+h1, h2 {
+  color: #4e342e;
+  margin-bottom: 0.5em;
 }
 
-@keyframes fadeInCinematic {
-  from { opacity: 0; transform: translate(-50%, -45%) scale(0.97);}
-  to   { opacity: 1; transform: translate(-50%, -50%) scale(1);}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #a1887f 0%, #6d4c41 100%);
+  color: #fff8e1;
+  padding: 3rem 1rem;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
 }
 
-/* Optional: Hide scrollbars for cinematic effect */
-::-webkit-scrollbar { width: 0 !important; }
-body { -ms-overflow-style: none; scrollbar-width: none; }
+.hero-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #8d6e63;
+  box-shadow: 0 4px 24px #4e342e22;
+  margin-right: 2.5rem;
+  background: #fff8e1;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 0.7em 1.8em;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #8d6e63;
+  color: #fff8e1;
+}
+.btn-primary:hover {
+  background: #6d4c41;
+}
+
+.btn-secondary {
+  background: #fff8e1;
+  color: #8d6e63;
+  border: 2px solid #8d6e63;
+}
+.btn-secondary:hover {
+  background: #8d6e63;
+  color: #fff8e1;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid #a1887f;
+  background: #fff8e1;
+}
+
+.about-content p {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+.portfolio .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 14px;
+  border: 3px solid #8d6e63;
+  box-shadow: 0 2px 8px #4e342e11;
+  transition: transform 0.2s, box-shadow 0.2s;
+  object-fit: cover;
+  aspect-ratio: 4/5;
+}
+.gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 24px #4e342e22;
+  border-color: #4e342e;
+}
+
+.resume-list {
+  list-style: none;
+  padding: 0;
+}
+.resume-list li {
+  margin-bottom: 1.2em;
+  padding-left: 0.5em;
+  border-left: 4px solid #a1887f;
+  background: #f3e6d6;
+  border-radius: 0 8px 8px 0;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+}
+
+.resume-list strong {
+  color: #4e342e;
+}
+
+.resume-list span {
+  color: #8d6e63;
+  font-size: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.9em;
+  border: 2px solid #a1887f;
+  border-radius: 8px;
+  background: #fff8e1;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: flex-end;
+}
+
+footer {
+  text-align: center;
+  padding: 2em 0 0.7em 0;
+  background: #6d4c41;
+  color: #fff8e1;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  margin-top: 2.5rem;
+  font-size: 1.03rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 750px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0.5rem;
+  }
+  .hero-img {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .about-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
