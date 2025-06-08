@@ -1,76 +1,48 @@
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #0e0e0e;
-  color: #fff;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- meta & links omitted for brevity -->
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Dwight M. Rose</h1>
+      <p class="tagline">“It’s one thing to have a dream—it’s another to go after it.”</p>
+      <div class="buttons">
+        <a href="#acting" class="btn primary">🎭 Acting Portfolio</a>
+        <a href="#music" class="btn">🎵 Music</a>
+        <a href="mailto:dwightmrose1@gmail.com" class="btn">📩 Contact</a>
+      </div>
+    </div>
+  </header>
 
-.hero {
-  background-image: url('https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=1950&q=80');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-}
+  <section id="acting" class="section dark">
+    <h2>Acting Credits & Demos</h2>
+    <ul class="links-list">
+      <li><a href="YOUR_LINKTREE_ACTING_IS_DOING">Acting Is Doing</a></li>
+      <!-- Add other acting links -->
+      <li><a href="YOUR_LINKTREE_DE NERO">Motivational Speech w/ De Niro</a></li>
+      <li><a href="YOUR_BACKSTAGE_PROFILE">Backstage (Acting)</a></li>
+      <li><a href="YOUR_BACKSTAGE_VO_PROFILE">Backstage (Voice‑Over)</a></li>
+      <li><a href="YOUR_YOUTUBE_CHANNEL">YouTube Channel</a></li>
+    </ul>
+    <div class="insta-highlight">
+      <img src="https://instagram.fdel1‑1.fna.fbcdn.net/..." alt="Childhood home memory">
+      <p>“Far am coming from & far mi ago…”</p>
+    </div>
+  </section>
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 40px;
-  border-radius: 10px;
-}
+  <section id="music" class="section">
+    <h2>Featured Tracks</h2>
+    <ul class="links-list">
+      <li><a href="YOUR_SOLO_LINK">SOLO – (Arguments)</a></li>
+      <li><a href="YOUR_MINDSET_LINK">Mindset</a></li>
+    </ul>
+    <div class="media-wrapper">
+      <iframe src="https://www.youtube.com/embed/9dsU3KiAquI" ...></iframe>
+    </div>
+  </section>
 
-h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.tagline {
-  font-size: 1.2rem;
-  margin: 10px 0 20px;
-}
-
-.buttons .btn {
-  text-decoration: none;
-  color: #fff;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 30px;
-  border: 1px solid #fff;
-  transition: background 0.3s;
-}
-
-.btn.primary {
-  background: #ff0033;
-  border: none;
-}
-
-.btn:hover {
-  background: #222;
-}
-
-.section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.media-wrapper {
-  max-width: 700px;
-  margin: auto;
-}
-
-footer {
-  background: #111;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  color: #fff;
-  font-size: 1.5rem;
-}
+  <footer>…</footer>
+</body>
+</html>
