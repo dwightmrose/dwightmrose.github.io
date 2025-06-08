@@ -1,81 +1,180 @@
-/* Import fonts */
-body {
+/* Reset some default styles */
+* {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #2e1b0f;
-  color: #f9f3ec;
-  line-height: 1.6;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f5f1ec; /* Off-white text for good contrast */
 }
 
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-}
-
-.hero {
-  background: url('https://images.unsplash.com/photo-1506812574058-fc75fa93fead?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
+/* Background cinematic gradient with subtle grain/noise effect */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4b2e0e, #8b5e3c, #3a1e06);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   position: relative;
+  overflow-x: hidden;
 }
 
-.overlay {
-  background-color: rgba(30, 15, 5, 0.8);
-  padding: 2rem;
-  border-radius: 10px;
+/* Optional: subtle noise texture overlay using a semi-transparent PNG or CSS noise if you want */
+/* You can add later as a separate layer */
+
+/* Container wrapper for consistent padding */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
 }
 
-.btn {
-  background-color: #a47551;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  margin-top: 1rem;
-  display: inline-block;
+/* Header section with your hero image */
+header.hero {
+  position: relative;
+  height: 450px;
+  background: url('images/shirtless-instagram.jpg') center center/cover no-repeat;
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 40px;
+  color: #f5f1ec;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 8px #331a00;
+}
+
+/* Navigation menu styling */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+nav ul li a {
+  color: #deb887; /* light brown */
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f5f1ec;
+  text-shadow: 0 0 6px #deb887;
+}
+
+/* Section titles */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #deb887;
+  padding-bottom: 5px;
+  color: #f5f1ec;
+}
+
+/* Paragraph styling */
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #f5f1ec;
+}
+
+/* Links as buttons */
+.btn {
+  display: inline-block;
+  background-color: #a97449; /* medium brown */
+  color: #f5f1ec;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(169, 116, 73, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #8a5c3a;
+  background-color: #deb887; /* lighter brown */
+  box-shadow: 0 0 25px #deb887;
 }
 
-.section {
-  padding: 4rem 2rem;
-  max-width: 900px;
-  margin: auto;
-  background-color: #3a2416;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+/* Video iframe wrapper with shadow and rounded corners */
+.video-wrapper {
+  margin: 20px 0 40px 0;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-iframe {
+.video-wrapper iframe {
   width: 100%;
-  height: 200px;
-  border-radius: 10px;
+  height: 400px;
+  border: none;
 }
 
-.social-links a {
-  display: inline-block;
-  margin: 0.5rem 1rem;
-  color: #ffdbb2;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
+/* Social icons container */
 footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  background: #3a1e06;
   text-align: center;
-  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px #000000aa;
+}
+
+.social-icons a {
+  color: #deb887;
+  margin: 0 15px;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f5f1ec;
+  text-shadow: 0 0 8px #deb887;
+}
+
+/* Footer copyright */
+footer p {
+  margin-top: 12px;
   font-size: 0.9rem;
-  color: #d4bfa5;
+  color: #c9b59a;
+}
+
+/* Make page longer with spacing */
+main > section {
+  margin-bottom: 70px;
+}
+
+/* About me longer story style */
+#about p {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  font-size: 1.2rem;
+  color: #f5f1ec;
+  line-height: 1.7;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  header.hero {
+    font-size: 1.8rem;
+    height: 300px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .video-wrapper iframe {
+    height: 230px;
+  }
 }
