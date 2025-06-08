@@ -1,0 +1,71 @@
+/* Simple, clean, mobile-first design */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #fdfdfd;
+  color: #222;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin: 10px 0 30px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.btn.primary {
+  background: #e91e63;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.video-wrapper, .audio-wrapper {
+  margin: 20px 0;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
